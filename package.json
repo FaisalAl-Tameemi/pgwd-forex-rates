@@ -1,0 +1,19 @@
+{
+  "name": "forex-cli",
+  "version": "1.0.0",
+  "description": "A Foreign Exchange rates CLI tool from Practical Guide To Web Development.",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaisalAl-Tameemi/pgwd-forex-cli.git"
+  },
+  "author": "Faisal Al-Tameemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FaisalAl-Tameemi/pgwd-forex-cli/issues"
+  },
+  "homepage": "https://github.com/FaisalAl-Tameemi/pgwd-forex-cli#readme"
+}
