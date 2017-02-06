@@ -1,7 +1,7 @@
 {
-  "name": "forex-cli",
+  "name": "forex-rates",
   "version": "1.0.0",
-  "description": "A Foreign Exchange rates CLI tool from Practical Guide To Web Development.",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "mocha"
