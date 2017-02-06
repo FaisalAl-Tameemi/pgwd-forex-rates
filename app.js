@@ -1,30 +1,21 @@
-'use strict';
+const ratesUtil = require('./lib/ratesUtil');
 
-// require the needed npm packages
-const prettyjson = require('prettyjson');
-const parseArgs = require('minimist');
+/**
+ * Example of calling the `getRates` method
+ */
+ratesUtil
+  .getRates('CAD')
+  .then((response) => {
+    console.log(response.data.rates);
+  })
+  .catch(console.error);
 
-// require the dataUtil for downloading ForEx data
-const dataUtil = require('./util/data.util');
-
-// parse the command line arguments
-const commands = parseArgs(process.argv);
-const task = commands.task || commands.t;
-
-// stop if the task hasn't been specified
-if(!task){
-	return console.log("\n Please enter a valid command using '--task [TASK_NAME]' \n");
-}
-
-// run the code that matches the task specified
-switch(task){
-	case 'compare':
-		console.log('compare command...');
-		break;
-	case 'list':
-		console.log('should list the most frequest 10 rates...');
-		break;
-	default:
-		console.log('\n Command not found :( \n');
-		break;
-}
+/**
+ * Example of calling the `getRatesCompare` method
+ */
+ratesUtil
+  .getRatesCompare(['CAD', 'USD'], '2015-10-10')
+  .then((response) => {
+    console.log(response.data.rates);
+  })
+  .catch(console.error);
